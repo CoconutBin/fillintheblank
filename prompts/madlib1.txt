@@ -1,0 +1,1 @@
+I am a ${noun}, you are a ${noun}, suck my ${suckable_noun}
