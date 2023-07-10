@@ -32,7 +32,7 @@ madLibDiv.addEventListener('submit', (event) => {
         answerArray.push(prompt(`Give me a ${partOfSpeech}`))
     }
     for(let i in partsOfSpeech){
-        madlib = madlib.replace(`\${${partsOfSpeech[i].replaceAll(" ", "_")}}`, answerArray[i] == ''? config.wordBank[Math.floor(Math.random()*config.wordBank.length)]:answerArray[i])
+        madlib = madlib.replace(`\${${partsOfSpeech[i].replaceAll(" ", "_")}}`, answerArray[i] == ''||answerArray[i] == null? config.wordBank[Math.floor(Math.random()*config.wordBank.length)]:answerArray[i])
     }
     
     console.log(madlib)
