@@ -14,12 +14,22 @@ label {
     box-sizing: border-box;
 }
 
+.labeltext {
+    font-size: 40px;
+    color: white;
+    text-align: center;
+    margin: auto;
+    display: inline-block;
+    width: 100%;
+    box-sizing: border-box;
+}
+
 .button {
     display: block;
-    margin: 0 auto; /* Centers the button horizontally */
-    width: 200px; /* Sets the width of the button */
-    height: auto; /* Allows the button to adjust its height based on content */
-    transform: scale(2); /* Scales the button to twice its original size */
+    margin: 0 auto; 
+    width: 200px;
+    height: auto;
+    transform: scale(2);
 }
 
 div{

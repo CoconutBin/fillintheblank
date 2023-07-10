@@ -1,5 +1,5 @@
 let config = await fetch(`./config.json`).then(response => response.json())
-let madlib = await fetch(`./prompts/madlib${Math.ceil(Math.random()*1)}.txt`).then(response => response.text())
+let madlib = await fetch(`./prompts/madlib${Math.ceil(Math.random()*5)}.txt`).then(response => response.text())
 
 let customMadLib = document.getElementById("selfmade")
 let normalMadLib = document.getElementById("premade")
@@ -32,7 +32,7 @@ madLibDiv.addEventListener('submit', (event) => {
         answerArray.push(prompt(`Give me a ${partOfSpeech}`))
     }
     for(let i in partsOfSpeech){
-        madlib = madlib.replace(`\${${partsOfSpeech[i].replace(" ", "_")}}`, answerArray[i] == ''? config.wordBank[Math.floor(Math.random()*config.wordBank.length)]:answerArray[i])
+        madlib = madlib.replace(`\${${partsOfSpeech[i].replaceAll(" ", "_")}}`, answerArray[i] == ''? config.wordBank[Math.floor(Math.random()*config.wordBank.length)]:answerArray[i])
     }
     
     console.log(madlib)

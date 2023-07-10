@@ -1,0 +1,1 @@
+${plural_noun} are ${adjective}, ${plural_noun} are ${adjective_that_rhymes_with_poo}, ${noun} are a ${group_of_people} and so are you.
