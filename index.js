@@ -30,6 +30,10 @@ madLibDiv.addEventListener('submit', (event) => {
     let answerArray = []
     for(let partOfSpeech of partsOfSpeech){
         answerArray.push(prompt(`Give me a ${partOfSpeech}`))
+        if(answerArray.some(x => x == null)){
+            alert("Seems like an input is null, try again if this isn't intentional")
+            break
+        }
     }
     for(let i in partsOfSpeech){
         madlib = madlib.replace(`\${${partsOfSpeech[i].replaceAll(" ", "_")}}`, answerArray[i] == ''||answerArray[i] == null? config.wordBank[Math.floor(Math.random()*config.wordBank.length)]:answerArray[i])
