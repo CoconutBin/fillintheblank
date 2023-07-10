@@ -1,0 +1,48 @@
+h1{
+    font-size: 100px;
+    color: white;
+    text-align: center;
+}
+
+label {
+    font-size: 40px;
+    color: white;
+    text-align: center;
+    margin: auto;
+    display: inline-block;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.button {
+    display: block;
+    margin: 0 auto; /* Centers the button horizontally */
+    width: 200px; /* Sets the width of the button */
+    height: auto; /* Allows the button to adjust its height based on content */
+    transform: scale(2); /* Scales the button to twice its original size */
+}
+
+div{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    background-color: green; 
+    background-image: linear-gradient(rgb(48, 149, 243), rgb(36, 212, 168), rgb(175, 132, 243),rgb(48, 149, 243));
+    background-repeat: repeat; 
+    background-size: cover;
+    transition: width 2s, height 2s, transform 2s
+}
+
+textarea {
+    width: 60vw;
+    height: 40vh;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    resize: none;
+}

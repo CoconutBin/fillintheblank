@@ -10,14 +10,19 @@
 </head>
 <body>
     <h1>Madlibs!</h1>
-    <div id="madlibconfig">
-    <form>
+    <div>
+    <form id="madlibconfig">
+        <div>
         <label>Use a pre-generated madlib<input type="radio" name="textused" id="premade"></input></label> 
-        <label>Use a custom madlib<input type="radio" name="textused" id="selfmade"></inp></label>
+        <label>Use a custom madlib<input type="radio" name="textused" id="selfmade"></input></label>
+        </div>
         <br><br>
-        <label id="selfmadelabel" style="display: none;"><input type="text" id="custommadlib"></input><br>Parts of speech that you want customized should be ${part of speech}<br><br></label>
-        <input type="submit" value="Madlib!" id="submit">
+        <label id="selfmadelabel" style="display: none;"><textarea id="custommadlib"></textarea><br>Parts of speech that you want customized should be ${part_of_speech}<br><br></label>
+        <input type="submit" value="Madlib!" id="submit" class="button">
     </form>
+    </div>
+    <br><br>
+    <div id="finishedmadlib">
     </div>
 </body>
 </html>

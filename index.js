@@ -36,6 +36,7 @@ madLibDiv.addEventListener('submit', (event) => {
     }
     
     console.log(madlib)
+    document.getElementById('finishedmadlib').innerHTML = madlib
 })
 
 
