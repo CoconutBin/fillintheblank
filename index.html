@@ -15,9 +15,11 @@
         <div>
         <label>Use a pre-generated madlib<input type="radio" name="textused" id="premade"></input></label> 
         <label>Use a custom madlib<input type="radio" name="textused" id="selfmade"></input></label>
+        <label>Upload from a text file<input type="radio" name="textused" id="fileupload"></input></label>
         </div>
         <br><br>
         <label id="selfmadelabel" style="display: none;"><textarea id="custommadlib"></textarea><br>Parts of speech that you want customized should be ${part_of_speech}<br><br></label>
+        <input type="file" value="Upload File" id="file" class="button" style="display: none;" accept=".txt"><br><br><br><br></input>
         <input type="submit" value="Madlib!" id="submit" class="button">
     </form>
     </div>
