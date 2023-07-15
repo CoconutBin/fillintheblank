@@ -8,6 +8,9 @@ const selfMade = document.getElementById("selfmadelabel")
 const fileUpload = document.getElementById("file")
 const madLibDiv = document.getElementById("madlibconfig")
 const inputMadLib = document.getElementById("custommadlib")
+const errorInvalid = document.getElementById("filetypeinvalid")
+const errorNone = document.getElementById("filetypenone")
+const br = document.getElementById("noissue")
 
 customMadLib.addEventListener('change', () => {
     fileUpload.style.display = 'none'
@@ -30,12 +33,24 @@ madLibDiv.addEventListener('submit',async (event) => {
 
     if (uploadMadLib.checked) {
         const file = fileUpload.files[0];
-        console.log(file.type)
-        if (file.type == 'text/plain') {
+        if (file == undefined){
+            errorNone.style.display = 'block'
+            errorInvalid.style.display = 'none' 
+            br.style.display = 'none'
+        }
+        else if (file.type == 'text/plain') {
             const text = await file.text();
             madlib = text;
+            errorNone.style.display = 'none' 
+            errorInvalid.style.display = 'none'
         }
-        else throw new Error("Invalid file upload")
+        else{
+            errorInvalid.style.display = 'block'
+            errorNone.style.display = 'none' 
+            br.style.display = 'none'
+            throw new Error("Invalid file upload")
+        }
+        console.log(file.type)
     }
     
     if(inputMadLib.value != ''){
@@ -52,6 +67,12 @@ madLibDiv.addEventListener('submit',async (event) => {
     document.getElementById('finishedmadlib').innerHTML = madlib
 })
 
+/**
+ * Generates a function comment for the given function body.
+ *
+ * @param {string} text - The input text for processing.
+ * @return {string} The modified text after processing.
+ */    
 function main(text){
     let partsOfSpeech = [
         ... text.split(' ')
@@ -87,7 +108,6 @@ function main(text){
     console.log(text)
     return text
 }
-
 
 
 

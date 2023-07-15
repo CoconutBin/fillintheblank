@@ -1,0 +1,22 @@
+.labeltext {
+    font-size: 2.1vw;
+    color: white;
+    text-align: center;
+    margin: auto;
+    display: inline-block;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.button {
+    margin: 0 auto; 
+    width: 10.5vw;
+    height: auto;
+    transform: scale(2);
+}
+
+div{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}

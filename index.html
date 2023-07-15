@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="index.js" type="module"></script>
+    <script defer src="style.js"></script>
     <link rel="json" href="config.json">
+    <link rel="stylesheet" href="landscape.css" id="orientationcss">
     <link rel="stylesheet" href="index.css">
     <title>madlibs</title>
 </head>
@@ -19,7 +21,13 @@
         </div>
         <br><br>
         <label id="selfmadelabel" style="display: none;"><textarea id="custommadlib"></textarea><br>Parts of speech that you want customized should be ${part_of_speech}<br><br></label>
-        <input type="file" value="Upload File" id="file" class="button" style="display: none;" accept=".txt"><br><br><br><br></input>
+        <div style="display: flexbox; justify-content: center;">
+            <input type="file" id="file" class="filebutton" style="display: none;" accept=".txt"><br></input>
+        </div>
+        <a style="display: none;" id="filetypeinvalid" class="errormessage">Error: filetype invalid</a>
+        <a style="display: none;" id="filetypenone" class="errormessage">Error: no file selected</a>
+        <a style="display: block;" id="noissue"><br></a>
+        <br><br>
         <input type="submit" value="Madlib!" id="submit" class="button">
     </form>
     </div>
